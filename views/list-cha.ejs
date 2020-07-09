@@ -1,0 +1,21 @@
+<h3>List Cha</h3>
+
+<table width="30%" border="1">
+     <tr>
+          <td>Title</td>
+          <td>Bung Bau</td>
+          <td></td>
+     </tr>
+     <% if(ds){ %>
+     <% ds.forEach((item)=>{ %>
+     <tr>
+          <td><%=item.Title%></td>
+          <td></td>
+          <td>
+               <a href="/edit-cha/<%=item._id%>"> Update</a>
+               <a href="/delete-cha/<%=item._id%>">Edit</a>
+          </td>
+     </tr>
+     <%})%>
+     <%}%>
+     </table>

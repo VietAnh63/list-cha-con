@@ -1,0 +1,18 @@
+#wrapper {
+     width: 90%;
+     margin: auto
+}
+
+#header{
+     width: 100%;
+     background-color: aqua;
+     font-size: 30px;
+     font-weight: 700;
+     padding: 20px;
+     text-align: center;
+}
+#content{
+     width: 100%;
+     background-color: cadetblue;
+     min-height: 400px;
+}

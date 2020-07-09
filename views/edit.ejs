@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <base href="http://localhost:3000" />
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Edit Magic</title>
+     <style>
+          input {
+               margin: 10px
+          }
+     </style>
+</head>
+
+<body>
+     <h3>Edit Magic</h3>
+     <form action="/edit" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="IDCard" value="<%=magic._id%>" />
+          <input type="text" value="<%=magic.name%>" name="txtName" placeholder="Name" /><br>
+          <input type="file" name="magicImage" id="prd_image" /><br>
+          <br>
+          <div>
+               <img width="200" height="220" id="img_preview" src="upload/<%=magic.image%>" />
+          </div>
+          <input type="text" value="<%=magic.level%>" name="txtLevel" placeholder="Level" /><br>
+          <input type="submit" value="Edit" />
+     </form>
+</body>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+     $(document).ready(function () {
+          const prd_image = $('#prd_image')
+          prd_image.on("change", function (e) {
+               //console.log("e.target", e.target.files[0]);
+
+               const file = e.target.files[0]
+               //console.log(typeof file)
+
+               //Dung bo doc file la FileReader de doc file duoi dang base64
+               const reader = new FileReader()
+               reader.onload = function (event) {
+                    console.log(event.target.result)
+                    $("#img_preview").attr("src", event.target.result)
+               }
+               if (file) {
+                    reader.readAsDataURL(file)
+               }
+
+          })
+     })
+</script>
+
+</html>

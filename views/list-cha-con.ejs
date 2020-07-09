@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/css/list-cha-con.css">
+     <title>List Cha Con</title>
+</head>
+
+<body>
+     <div id="menu">
+          <% Chas.forEach((Cha)=>{%>
+          <div class="cha"><%=Cha.Title%></div>
+          <div>
+               <%Cha.DSCon.forEach((Con)=>{%>
+               <div class="con">
+                    <%=Con.Title%>
+               </div>
+               <%})%>
+          </div>
+          <%})%>
+     </div>
+</body>
+
+</html>

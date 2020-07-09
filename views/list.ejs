@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Danh sach Magics</title>
+</head>
+
+<body>
+     <h1><a href="/add">ADD</a></h1>
+     <% magics.forEach((magic)=>{%>
+     <div class="charactor">
+          <img width="150" height="150" src="./upload/<%=magic.image%>" alt="" />
+          <div class="magicName"><%=magic.name%></div>
+          <div class="magicLevel"><%=magic.level%></div>
+          <div class="button">
+               <a href="/edit/<%=magic._id%>">update</a>
+               <a href="/delete/<%=magic._id%>">delete</a>
+          </div>
+     </div>
+     <%})%>
+</body>
+
+</html>

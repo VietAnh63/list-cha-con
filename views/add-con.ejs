@@ -1,0 +1,10 @@
+<h3>CHA ADD NEW</h3>
+<form action="/add-con" method="POST">
+     <select name="slCha">
+          <% dsCha.forEach((item)=>{%>
+          <option value="<%=item._id%>"><%=item.Title%></option>
+          <%})%>
+     </select>
+     <input type="text" placeholder="Title Con" name="txtConTitle" />
+     <input type="submit" value="add con" />
+</form>

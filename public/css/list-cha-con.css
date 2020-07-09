@@ -1,0 +1,14 @@
+#menu{
+     width: 100px;
+}
+
+.cha{
+     background-color: coral;
+     color: cornsilk;
+     font-weight: bold;
+}
+.con{
+     background-color: darkcyan;
+     color: darkmagenta;
+     font-weight: normal;
+}
