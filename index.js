@@ -11,7 +11,7 @@ app.listen(3000, () => {
 
 //connect mongoDB atlas
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://anhpv:anhpv@cluster0.et3z1.mongodb.net/Magics?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
+mongoose.connect('mongodb+srv://anhpv:<password>@cluster0.et3z1.mongodb.net/Magics?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
     if(err){
         console.log("Mongo connect erro: ", err)
     }else{
